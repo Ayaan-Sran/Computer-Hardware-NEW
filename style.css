@@ -1,0 +1,37 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  main {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  
+  .part {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: inline-block;
+    width: 100px;
+  }
+  
+  #total {
+    flex-basis: 30%;
+  }
+  
+  #totalCost {
+    font-size: 24px;
+    font-weight: bold;
+  }

@@ -1,79 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Build Your PC</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PC Builder</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Build Your PC</h1>
-    </header>
-
-    <main>
-        <section id="parts">
-            <h2>Select Hardware Parts</h2>
-            <label for="cpu">CPU:</label>
-            <select id="cpu">
-                <option value="0">Select CPU</option>
-                <option value="300">Intel Core i9-9900K - $300</option>
-                <option value="400">AMD Ryzen 9 5900X - $400</option>
-            </select>
-
-            <label for="gpu">GPU:</label>
-            <select id="gpu">
-                <option value="0">Select GPU</option>
-                <option value="500">NVIDIA GeForce RTX 3070 - $500</option>
-                <option value="700">AMD Radeon RX 6800 XT - $700</option>
-            </select>
-
-            <label for="ram">RAM:</label>
-            <select id="ram">
-                <option value="0">Select RAM</option>
-                <option value="100">Corsair Vengeance LPX 16GB - $100</option>
-                <option value="200">G.SKILL Ripjaws V Series 32GB - $200</option>
-            </select>
-
-            <label for="storage">Storage:</label>
-            <select id="storage">
-                <option value="0">Select Storage</option>
-                <option value="80">Samsung 970 EVO 500GB SSD - $80</option>
-                <option value="120">Western Digital Blue 1TB SSD - $120</option>
-            </select>
-
-            <label for="motherboard">Motherboard:</label>
-            <select id="motherboard">
-                <option value="0">Select Motherboard</option>
-                <option value="150">ASUS ROG Strix Z390-E - $150</option>
-                <option value="180">MSI MPG X570 GAMING PLUS - $180</option>
-            </select>
-
-            <label for="case">PC Case:</label>
-            <select id="case">
-                <option value="0">Select PC Case</option>
-                <option value="80">NZXT H510 - $80</option>
-                <option value="100">Corsair Carbide Series 275R - $100</option>
-            </select>
-
-            <label for="led">LED Lights:</label>
-            <select id="led">
-                <option value="0">Select LED Lights</option>
-                <option value="20">RGB LED Strip - $20</option>
-                <option value="30">Corsair LL120 RGB LED - $30</option>
-            </select>
-
-            <label for="cooling">Cooling Fan:</label>
-            <select id="cooling">
-                <option value="0">Select Cooling Fan</option>
-                <option value="50">Cooler Master Hyper 212 RGB - $50</option>
-                <option value="70">NZXT Kraken X53 - $70</option>
-            </select>
-
-            <h3>Total Cost: $<span id="total">0</span></h3>
-        </section>
-    </main>
-
-    <script src="script.js"></script>
+  <header>
+    <h1>PC Builder</h1>
+  </header>
+  <main>
+    <section id="parts">
+      <h2>Select Parts</h2>
+      <div class="part">
+        <label for="cpu">CPU:</label>
+        <select id="cpu" onchange="calculateTotal()">
+          <option value="0">Select CPU</option>
+          <option value="100">Intel Core i5-9600K - $100</option>
+          <option value="200">AMD Ryzen 5 3600 - $200</option>
+          <option value="300">Intel Core i7-10700K - $300</option>
+        </select>
+      </div>
+      <div class="part">
+        <label for="gpu">GPU:</label>
+        <select id="gpu" onchange="calculateTotal()">
+          <option value="0">Select GPU</option>
+          <option value="150">NVIDIA GeForce GTX 1660 Ti - $150</option>
+          <option value="250">AMD Radeon RX 5700 XT - $250</option>
+          <option value="350">NVIDIA GeForce RTX 3080 - $350</option>
+        </select>
+      </div>
+      <div class="part">
+        <label for="ram">RAM:</label>
+        <select id="ram" onchange="calculateTotal()">
+          <option value="0">Select RAM</option>
+          <option value="50">Corsair Vengeance LPX 8GB - $50</option>
+          <option value="100">G.SKILL Ripjaws V Series 16GB - $100</option>
+          <option value="150">Crucial Ballistix RGB 32GB - $150</option>
+        </select>
+      </div>
+    </section>
+    <section id="total">
+      <h2>Total Cost</h2>
+      <div id="totalCost">$0</div>
+    </section>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
