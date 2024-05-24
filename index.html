@@ -17,27 +17,80 @@
         <label for="cpu">CPU:</label>
         <select id="cpu" onchange="calculateTotal()">
           <option value="0">Select CPU</option>
-          <option value="100">Intel Core i5-9600K - $100</option>
-          <option value="200">AMD Ryzen 5 3600 - $200</option>
-          <option value="300">Intel Core i7-10700K - $300</option>
+          <option value="300">Intel Core i9-10900K - $300</option>
+          <option value="400">AMD Ryzen 9 5900X - $400</option>
+          <option value="500">Intel Core i9-11900K - $500</option>
         </select>
       </div>
       <div class="part">
-        <label for="gpu">GPU:</label>
+        <label for="cpuCooler">CPU Cooler:</label>
+        <select id="cpuCooler" onchange="calculateTotal()">
+          <option value="0">Select CPU Cooler</option>
+          <option value="100">Noctua NH-D15 - $100</option>
+          <option value="150">NZXT Kraken Z73 - $150</option>
+          <option value="200">Corsair H150i Pro - $200</option>
+        </select>
+      </div>
+      <div class="part">
+        <label for="ssd">SSD:</label>
+        <select id="ssd" onchange="calculateTotal()">
+          <option value="0">Select SSD</option>
+          <option value="120">Samsung 970 EVO Plus 500GB - $120</option>
+          <option value="180">WD Black SN850 1TB - $180</option>
+          <option value="250">Sabrent Rocket 4.0 2TB - $250</option>
+        </select>
+      </div>
+      <div class="part">
+        <label for="pcCase">PC Case:</label>
+        <select id="pcCase" onchange="calculateTotal()">
+          <option value="0">Select PC Case</option>
+          <option value="150">NZXT H710i - $150</option>
+          <option value="200">Fractal Design Define 7 - $200</option>
+          <option value="300">Corsair Obsidian 1000D - $300</option>
+        </select>
+      </div>
+      <div class="part">
+        <label for="gpu">Graphics Card:</label>
         <select id="gpu" onchange="calculateTotal()">
-          <option value="0">Select GPU</option>
-          <option value="150">NVIDIA GeForce GTX 1660 Ti - $150</option>
-          <option value="250">AMD Radeon RX 5700 XT - $250</option>
-          <option value="350">NVIDIA GeForce RTX 3080 - $350</option>
+          <option value="0">Select Graphics Card</option>
+          <option value="500">NVIDIA GeForce RTX 3070 - $500</option>
+          <option value="700">AMD Radeon RX 6800 XT - $700</option>
+          <option value="1000">NVIDIA GeForce RTX 3090 - $1000</option>
+        </select>
+      </div>
+      <div class="part">
+        <label for="psu">Power Supply Unit:</label>
+        <select id="psu" onchange="calculateTotal()">
+          <option value="0">Select PSU</option>
+          <option value="150">EVGA SuperNOVA 750 G5 - $150</option>
+          <option value="200">Corsair RM850x - $200</option>
+          <option value="300">Seasonic Prime TX-1000 - $300</option>
+        </select>
+      </div>
+      <div class="part">
+        <label for="motherboard">Motherboard:</label>
+        <select id="motherboard" onchange="calculateTotal()">
+          <option value="0">Select Motherboard</option>
+          <option value="250">ASUS ROG Strix Z590-E - $250</option>
+          <option value="300">GIGABYTE X570 AORUS MASTER - $300</option>
+          <option value="400">MSI MEG Z490 GODLIKE - $400</option>
         </select>
       </div>
       <div class="part">
         <label for="ram">RAM:</label>
         <select id="ram" onchange="calculateTotal()">
           <option value="0">Select RAM</option>
-          <option value="50">Corsair Vengeance LPX 8GB - $50</option>
-          <option value="100">G.SKILL Ripjaws V Series 16GB - $100</option>
-          <option value="150">Crucial Ballistix RGB 32GB - $150</option>
+          <option value="150">Corsair Vengeance RGB Pro 16GB - $150</option>
+          <option value="200">G.SKILL Trident Z RGB 32GB - $200</option>
+          <option value="300">Crucial Ballistix MAX 64GB - $300</option>
+        </select>
+      </div>
+      <div class="part">
+        <label for="plating">Plating:</label>
+        <select id="plating" onchange="calculateTotal()">
+          <option value="0">Select Plating</option>
+          <option value="10000">Gold Plating - $10,000</option>
+          <option value="5000">Silver Plating - $5,000</option>
         </select>
       </div>
     </section>
@@ -46,6 +99,5 @@
       <div id="totalCost">$0</div>
     </section>
   </main>
-  <script src="script.js"></script>
 </body>
 </html>
